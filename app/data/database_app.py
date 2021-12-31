@@ -32,8 +32,8 @@ class DatabaseApp:
             self.base = Base
             create_database(self.database_uri)
             self.base.metadata.create_all(bind=self.engine)
-            from app.data.load import load_type_models
-
+            import app.data.load.load_user_model
+            import app.data.load.load_type_models
 
     def get_session(self):
         return self.session

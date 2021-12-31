@@ -6,12 +6,9 @@ All of the type models are built the same way. So I should only need to model fo
 
 import unittest
 
-from sqlalchemy.orm import Session
 from app.data.database_app import database_app
-from app.data.commands.type_command import get_all
+from app.data.commands.type_command import get_all, get_type_by_code, get_type_by_id
 from app.data.models.cost_type_model import CostTypeModel
-
-data_app = database_app
 
 
 class TestTypeCommand(unittest.TestCase):
@@ -32,7 +29,17 @@ class TestTypeCommand(unittest.TestCase):
 
     def test_get_all(self):
         results = get_all(db=self.session, model=CostTypeModel)
-        self.assertTrue(isinstance(type(results), CostTypeModel))
+        self.assertTrue(isinstance(results.pop(), CostTypeModel))
+
+    def test_get_type_by_code(self):
+        results = get_type_by_code(db=self.session, model=CostTypeModel, code="pickup")
+        self.assertTrue(isinstance(results, CostTypeModel))
+        self.assertEqual(results.code, "pickup")
+
+    def test_get_type_by_id(self):
+        results = get_type_by_id(db=self.session, model=CostTypeModel, id=1)
+        self.assertTrue(isinstance(results, CostTypeModel))
+        self.assertEqual(results.code, "pickup")
 
 
 if __name__ == '__main__':

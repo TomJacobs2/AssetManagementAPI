@@ -1,6 +1,5 @@
 #  Copyright (c) Thomas Jacobs. All Rights Reserved.
 
-from sqlalchemy.orm import Session
 from typing import TypeVar
 
 from app.data.database_app import database_app, Base
@@ -31,13 +30,11 @@ create_type(model=CostTypeModel, code="damages", description="Amount of damages 
 create_type(model=CostTypeModel, code="cleaning", description="Amount for cleaning asset after rental")
 create_type(model=CostTypeModel, code="germcleaning", description="Disinfectant cleaning")
 
-
 from app.data.models.frequency_type_model import FrequencyTypeModel
 create_type(model=FrequencyTypeModel, code="hourly", description="Hourly")
 create_type(model=FrequencyTypeModel, code="daily", description="Daily")
 create_type(model=FrequencyTypeModel, code="weekly", description="Weekly")
 create_type(model=FrequencyTypeModel, code="monthly", description="Monthly")
-
 
 from app.data.models.invoice_status_type_model import InvoiceStatusTypeModel
 create_type(model=InvoiceStatusTypeModel, code="draft", description="Draft")
@@ -46,11 +43,9 @@ create_type(model=InvoiceStatusTypeModel, code="billed", description="Billed")
 create_type(model=InvoiceStatusTypeModel, code="paid", description="Paid")
 create_type(model=InvoiceStatusTypeModel, code="pastdue", description="Past Due")
 
-
 from app.data.models.rental_status_type_model import RentalStatusTypeModel
 create_type(model=RentalStatusTypeModel, code="ready", description="Ready to be rented")
 create_type(model=RentalStatusTypeModel, code="rented", description="Currently rented")
 create_type(model=RentalStatusTypeModel, code="repair", description="Out for repair of damages")
 create_type(model=RentalStatusTypeModel, code="cleaning", description="Being clean")
 create_type(model=RentalStatusTypeModel, code="maintenance", description="Out for normal maintenance")
-
