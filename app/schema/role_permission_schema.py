@@ -4,22 +4,22 @@ from pydantic import BaseModel
 from typing import Sequence, Optional
 
 
-class SystemRolePermissionBase(BaseModel):
+class RolePermissionBase(BaseModel):
     code: str
     description: str
     retired: Optional[bool] = False
     for_external_user: Optional[bool] = False
 
 
-class SystemRolePermissionCreate(SystemRolePermissionBase):
+class RolePermissionCreate(RolePermissionBase):
     pass
 
 
-class SystemRolePermissionUpdate(SystemRolePermissionBase):
+class RolePermissionUpdate(RolePermissionBase):
     id: int
 
 
-class SystemRolePermissionInDBBase(SystemRolePermissionBase):
+class RolePermissionInDBBase(RolePermissionBase):
     id: int
     create_date: str
     update_date: str
@@ -28,9 +28,9 @@ class SystemRolePermissionInDBBase(SystemRolePermissionBase):
         orm_mode = True
 
 
-class SystemRolePermission(SystemRolePermissionInDBBase):
+class RolePermission(RolePermissionInDBBase):
     pass
 
 
-class SystemRolePermissionSearchResults(BaseModel):
-    results: Sequence[SystemRolePermission]
+class RolePermissionSearchResults(BaseModel):
+    results: Sequence[RolePermission]

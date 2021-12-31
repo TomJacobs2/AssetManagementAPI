@@ -18,5 +18,8 @@ class UserCommand(CommandBase[UserModel, UserCreate, UserUpdate]):
     def get_user_by_email(self, db: Session, email: str):
         return db.query(self.model).filter(self.model.email == email).first()
 
+    def get_users_by_system_role(self, db: Session, role_id: int):
+        return db.query(self.model).filter(self.model.system_role_id == role_id).all()
+    
 
 user_cmd = UserCommand(UserModel)

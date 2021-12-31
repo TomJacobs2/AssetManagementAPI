@@ -13,6 +13,7 @@ class UserBase(BaseModel):
     login_name: str
     active: Optional[bool] = True
     locked: Optional[bool] = False
+    role_id: int
 
 
 class UserCreate(UserBase):

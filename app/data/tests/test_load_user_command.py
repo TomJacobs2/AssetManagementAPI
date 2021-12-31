@@ -33,7 +33,7 @@ class TestLoadUserCommand(unittest.TestCase):
         self.assertGreater(len(results), 0)
 
     def test_get_user_by_credentials(self):
-        results = user_cmd.get_user_by_credentials(db=self.session, username="super.user", password="SpiderMonkeys")
+        results = user_cmd.get_user_by_credentials(db=self.session, username="super.user", password="SpiderMonkeys2")
         self.assertEqual(results.first_name, "Super")
         self.assertEqual(results.last_name, "User")
 
