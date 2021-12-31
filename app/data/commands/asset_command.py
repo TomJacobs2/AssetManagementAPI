@@ -16,7 +16,7 @@ class AssetCommand(CommandBase[AssetModel, AssetCreate, AssetUpdate]):
     def get_asset_by_category_id(self, db: Session, category_id: int):
         return db.query(self.model).filter(self.model.asset_category_id == category_id).all()
 
-    def get_asset_by_manufacturer_id(self, db: Session, manufacturer_id):
+    def get_asset_by_manufacturer_id(self, db: Session, manufacturer_id: int):
         return db.query(self.model).filter(self.model.asset_manufacturer_id == manufacturer_id).all()
 
 

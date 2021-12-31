@@ -9,7 +9,7 @@ from app.data.models.asset_category_type_model import AssetCategoryTypeModel
 
 
 sport_car_id = get_type_by_code(db=database_app.get_session(), model=AssetCategoryTypeModel, code="sport").id
-esport_car_id = get_type_by_code(db=database_app.get_session(), model=AssetCategoryTypeModel, code="sport").id
+esport_car_id = get_type_by_code(db=database_app.get_session(), model=AssetCategoryTypeModel, code="esport").id
 truck_id = get_type_by_code(db=database_app.get_session(), model=AssetCategoryTypeModel, code="truck").id
 
 ferrari_id = get_type_by_code(db=database_app.get_session(), model=AssetManufacturerTypeModel, code="ferrari").id

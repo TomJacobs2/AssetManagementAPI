@@ -13,11 +13,11 @@ class TestLoadTypeModels(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print("Start Test Type Models")
+        print("Start Test Role Permission Models")
 
     @classmethod
     def tearDownClass(cls):
-        print('Finished Test Type Models')
+        print('Finished Test Role Permission Models')
 
     def setUp(self):
         self.session = database_app.get_session()

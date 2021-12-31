@@ -11,11 +11,11 @@ class TestLoadAccountCommand(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print("Start Account Command")
+        print("Start Test Account Command")
 
     @classmethod
     def tearDownClass(cls):
-        print('Finished Account Command')
+        print('Finished Test Account Command')
 
     def setUp(self):
         self.session = database_app.get_session()

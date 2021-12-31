@@ -4,7 +4,7 @@ import unittest
 
 from app.data.database_app import database_app
 from app.data.commands.user_command import user_cmd
-from app.data.models.user_model import UserModel
+
 
 
 class TestLoadUserCommand(unittest.TestCase):
