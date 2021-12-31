@@ -1,13 +1,13 @@
 #  Copyright (c) Thomas Jacobs. All Rights Reserved.
 
 from pydantic import BaseModel
-from typing import Sequence
+from typing import Sequence, Optional
 
 
 class TypeBase(BaseModel):
     code: str
     description: str
-    retired: bool
+    retired: Optional[bool] = False
 
 
 class TypeCreate(TypeBase):

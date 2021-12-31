@@ -28,14 +28,20 @@ raw_data = {"first_name": "Jonney", "last_name": "Applegate", "email": "jonney.a
 schema = UserCreate(**raw_data)
 user_cmd.create(db=database_app.get_session(), schema_in=schema)
 
-raw_data = {"first_name": "Speed", "last_name": "Racer", "email": "speed_racer31@newracingcompany.com",
+raw_data = {"first_name": "Speed", "last_name": "Racer", "email": "speed_racer31@@newspiderracing.com",
             "cell_phone": 5739993331, "external_user": 1,
             "login_name": "speed.racer31", "login_password": "TooFast4You"}
 schema = UserCreate(**raw_data)
 user_cmd.create(db=database_app.get_session(), schema_in=schema)
 
-raw_data = {"first_name": "Niki", "last_name": "Telsa", "email": "niki.telsa@newracingcompany.com",
+raw_data = {"first_name": "Niki", "last_name": "Telsa", "email": "niki.telsa@@newspiderracing.com",
             "cell_phone": 5739993332, "external_user": 1,
             "login_name": "niki.telsa", "login_password": "No1Faster"}
+schema = UserCreate(**raw_data)
+user_cmd.create(db=database_app.get_session(), schema_in=schema)
+
+raw_data = {"first_name": "Mike", "last_name": "Telason", "email": "mike.telason@@gorillaproracing.com",
+            "cell_phone": 5739993332, "external_user": 1,
+            "login_name": "mike.telason", "login_password": "Gorilla4Pro"}
 schema = UserCreate(**raw_data)
 user_cmd.create(db=database_app.get_session(), schema_in=schema)

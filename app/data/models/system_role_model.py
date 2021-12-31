@@ -14,7 +14,7 @@ class SystemRoleModel(Base):
     code = Column(String(16), nullable=False, index=True, unique=True)
     description = Column(String(256), nullable=False)
     retired = Column(Boolean, default=False)
-    external_user_role = Column(Boolean, default=False)
+    for_external_user = Column(Boolean, default=False)
 
     create_date = Column(DateTime, default=_datetime.datetime.utcnow())
     update_date = Column(DateTime, default=_datetime.datetime.utcnow())

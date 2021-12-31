@@ -25,8 +25,8 @@ class AccountModel(Base):
     business_phone = Column(String(16), nullable=True)
     business_email = Column(String(256), nullable=True)
 
-    primary_contact = Column(Integer, ForeignKey(UserModel.id), nullable=False)
-    account_manager = Column(Integer, ForeignKey(UserModel.id), nullable=False)
+    primary_contact_id = Column(Integer, ForeignKey(UserModel.id), nullable=True)
+    account_manager_id = Column(Integer, ForeignKey(UserModel.id), nullable=True)
 
     create_date = Column(DateTime, default=_datetime.datetime.utcnow())
     update_date = Column(DateTime, default=_datetime.datetime.utcnow())

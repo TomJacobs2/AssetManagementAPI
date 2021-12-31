@@ -14,14 +14,15 @@ class CommandBase(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
     def __init__(self, model: ModelType):
         self.model = model
 
-    def get_one(self, db: Session, model_id: int):
+    def get_one(self, db: Session, model_id: int) -> ModelType:
         return db.query(self.model).filter(self.model.id == model_id).first()
 
     def get_all(self, db: Session):
-        return db.query(self.model).all()
+        db_results = db.query(self.model).all()
+        return db_results
 
-    def get_all_for_id(self, db: Session, model_id: Any):
-        return db.query(self.model).filter(self.model.id == model_id).all()
+    def get_one_with_id(self, db: Session, model_id: Any) -> ModelType:
+        return db.query(self.model).filter(self.model.id == model_id).first()
 
     def create(self, db: Session, *, schema_in: CreateSchemaType) -> ModelType:
         model_data = jsonable_encoder(schema_in)
