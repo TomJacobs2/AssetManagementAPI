@@ -49,3 +49,21 @@ create_type(model=RentalStatusTypeModel, code="rented", description="Currently r
 create_type(model=RentalStatusTypeModel, code="repair", description="Out for repair of damages")
 create_type(model=RentalStatusTypeModel, code="cleaning", description="Being clean")
 create_type(model=RentalStatusTypeModel, code="maintenance", description="Out for normal maintenance")
+
+from app.data.models.asset_category_type_model import AssetCategoryTypeModel
+create_type(model=AssetCategoryTypeModel, code="sport", description="Sport Car")
+create_type(model=AssetCategoryTypeModel, code="esport", description="Electric Sport Car")
+create_type(model=AssetCategoryTypeModel, code="ecar", description="Electric Car")
+create_type(model=AssetCategoryTypeModel, code="truck", description="Pickup Truck")
+create_type(model=AssetCategoryTypeModel, code="etruck", description="Electric Pickup Truck")
+create_type(model=AssetCategoryTypeModel, code="suv", description="SUV")
+create_type(model=AssetCategoryTypeModel, code="esuv", description="Electric SUV")
+
+from app.data.models.asset_manufacturer_type_model import AssetManufacturerTypeModel
+create_type(model=AssetManufacturerTypeModel, code="chevy", description="Chevy")
+create_type(model=AssetManufacturerTypeModel, code="ford", description="Ford")
+create_type(model=AssetManufacturerTypeModel, code="dodge", description="Dodge")
+create_type(model=AssetManufacturerTypeModel, code="ferrari", description="Ferrari")
+create_type(model=AssetManufacturerTypeModel, code="lamborghini", description="Lamborghini")
+create_type(model=AssetManufacturerTypeModel, code="telsa", description="Telsa")
+create_type(model=AssetManufacturerTypeModel, code="mercedes", description="Mercedes")

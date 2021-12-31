@@ -9,6 +9,8 @@ from app.data.models.cost_type_model import CostTypeModel
 from app.data.models.frequency_type_model import FrequencyTypeModel
 from app.data.models.invoice_status_type_model import InvoiceStatusTypeModel
 from app.data.models.rental_status_type_model import RentalStatusTypeModel
+from app.data.models.asset_category_type_model import AssetCategoryTypeModel
+from app.data.models.asset_manufacturer_type_model import AssetManufacturerTypeModel
 
 
 class TestLoadTypeModels(unittest.TestCase):
@@ -71,6 +73,28 @@ class TestLoadTypeModels(unittest.TestCase):
         self.assertEqual(self.select_model_by_code(model_list=models, code="repair").code, "repair")
         self.assertEqual(self.select_model_by_code(model_list=models, code="cleaning").code, "cleaning")
         self.assertEqual(self.select_model_by_code(model_list=models, code="maintenance").code, "maintenance")
+
+    def test_load_asset_category_type_model(self):
+        models = get_all(db=self.session, model=AssetCategoryTypeModel)
+        self.assertEqual(len(models), 7)
+        self.assertEqual(self.select_model_by_code(model_list=models, code="sport").code, "sport")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="esport").code, "esport")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="ecar").code, "ecar")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="truck").code, "truck")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="etruck").code, "etruck")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="suv").code, "suv")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="esuv").code, "esuv")
+
+    def test_load_asset_manufacturer_type_model(self):
+        models = get_all(db=self.session, model=AssetManufacturerTypeModel)
+        self.assertEqual(len(models), 7)
+        self.assertEqual(self.select_model_by_code(model_list=models, code="chevy").code, "chevy")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="ford").code, "ford")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="dodge").code, "dodge")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="ferrari").code, "ferrari")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="lamborghini").code, "lamborghini")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="telsa").code, "telsa")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="mercedes").code, "mercedes")
 
 
 if __name__ == '__main__':
