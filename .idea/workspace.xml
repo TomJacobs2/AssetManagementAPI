@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="446fd8fb-a802-439b-a34f-49c158161fd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/data/models/account_user_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/models/role_permission_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/fast_api_app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/routes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/routes/asset_route.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/business/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/business/logic/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/business/logic/asset_logic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/commands/account_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/commands/account_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/load/load_account_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/load/load_account_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/models/account_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/models/account_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/tests/test_load_account_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/tests/test_load_account_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schema/account_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schema/account_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="copyright" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\repos\AssetManagementAPI\app" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.run_tests">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">

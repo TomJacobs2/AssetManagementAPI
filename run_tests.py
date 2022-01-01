@@ -1,4 +1,5 @@
 #  Copyright (c) Thomas Jacobs. All Rights Reserved.
+import uvicorn
 import os
 import unittest
 
@@ -22,3 +23,8 @@ data_layer_test_dir = './app/data/tests'
 data_layer_test_files = data_layer_loader.discover(data_layer_test_dir)
 data_layer_runner = unittest.TextTestRunner()
 data_layer_runner.run(data_layer_test_files)
+
+from app.api.fast_api_app import fast_api_app
+api_app = fast_api_app.get_app()
+
+uvicorn.run(api_app, host="127.0.0.1", port=5001)
