@@ -11,6 +11,7 @@ class AccountModel(Base):
     __tablename__ = "accounts"
 
     id = Column(Integer, primary_key=True, index=True)
+    account_number = Column(String(64), nullable=False)
     account_name = Column(String(256), nullable=False)
     mailing_line_one = Column(String(128), nullable=False)
     mailing_line_two = Column(String(128), nullable=True)

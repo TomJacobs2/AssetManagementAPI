@@ -10,8 +10,11 @@ from app.schema.account_schema import AccountCreate, AccountUpdate
 class AccountCommand(CommandBase[AccountModel, AccountCreate, AccountUpdate]):
     ...
 
-    def get_account_by_name(self, db: Session, account_name: str):
+    def get_account_by_account_name(self, db: Session, account_name: str):
         return db.query(self.model).filter(self.model.account_name == account_name).first()
+
+    def get_account_by_account_number(self, db: Session, account_number: str):
+        return db.query(self.model).filter(self.model.account_number == account_number).first()
 
     def get_account_manager_accounts(self, db: Session, account_manager_id: int):
         return db.query(self.model).filter(self.model.account_manager_id == account_manager_id).all()

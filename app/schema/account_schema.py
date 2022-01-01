@@ -5,6 +5,7 @@ from typing import Sequence, Optional
 
 
 class AccountBase(BaseModel):
+    account_number: str
     account_name: str
     mailing_line_one: str
     mailing_line_two: Optional[str] = None
