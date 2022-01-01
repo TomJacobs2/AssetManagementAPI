@@ -35,7 +35,7 @@ class TestLoadAssetCommand(unittest.TestCase):
 
     def test_get_all(self):
         results = asset_cmd.get_all(db=self.session)
-        self.assertGreater(len(results), 0)
+        self.assertEqual(len(results), 12)
 
     def test_get_asset_by_tag(self):
         results = asset_cmd.get_asset_by_tag(db=self.session, asset_tag="TEMSP2022001")

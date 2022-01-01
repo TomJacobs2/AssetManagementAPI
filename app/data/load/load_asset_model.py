@@ -48,7 +48,7 @@ raw_data = {"asset_tag": "LAEVOS2022001", "description": "Huracan Evo Spyder", "
 schema = AssetCreate(**raw_data)
 asset_cmd.create(db=database_app.get_session(), schema_in=schema)
 
-raw_data = {"asset_tag": "LAEVOS2022001", "description": "Huracan Evo Spyder", "mileage": 7325,
+raw_data = {"asset_tag": "LAEVOS2022002", "description": "Huracan Evo Spyder", "mileage": 7325,
             "model_year": "2022", "created_by": 1, "updated_by": 1, "color": "Arancio Anthaeus",
             "asset_category_id": sport_car_id, "asset_manufacturer_id": lamborghini_id}
 schema = AssetCreate(**raw_data)
@@ -72,7 +72,7 @@ raw_data = {"asset_tag": "FDF1502022002", "description": "F150", "mileage": 1764
 schema = AssetCreate(**raw_data)
 asset_cmd.create(db=database_app.get_session(), schema_in=schema)
 
-raw_data = {"asset_tag": "FDF1502022002", "description": "F150", "mileage": 41465,
+raw_data = {"asset_tag": "FDF1502021001", "description": "F150", "mileage": 41465,
             "model_year": "2021", "created_by": 1, "updated_by": 1, "color": "Red",
             "asset_category_id": truck_id, "asset_manufacturer_id": ford_id}
 schema = AssetCreate(**raw_data)
@@ -84,7 +84,7 @@ raw_data = {"asset_tag": "TEMSP2022001", "description": "Model S Plaid", "mileag
 schema = AssetCreate(**raw_data)
 asset_cmd.create(db=database_app.get_session(), schema_in=schema)
 
-raw_data = {"asset_tag": "TEMSP2022001", "description": "Model S Plaid", "mileage": 835,
+raw_data = {"asset_tag": "TEMSP2022002", "description": "Model S Plaid", "mileage": 835,
             "model_year": "2022", "created_by": 1, "updated_by": 1, "color": "Deep Blue Metallic",
             "asset_category_id": esport_car_id, "asset_manufacturer_id": telsa_id}
 schema = AssetCreate(**raw_data)

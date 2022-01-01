@@ -9,15 +9,15 @@ from app.data.commands.role_permission_command import get_all, get_role_permissi
 from app.data.models.role_model import RoleModel
 
 
-class TestLoadTypeModels(unittest.TestCase):
+class TestLoadRolePermissionCommand(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print("Start Test Role Permission Models")
+        print("Start Test Role Permission Command")
 
     @classmethod
     def tearDownClass(cls):
-        print('Finished Test Role Permission Models')
+        print('Finished Test Role Permission Command')
 
     def setUp(self):
         self.session = database_app.get_session()

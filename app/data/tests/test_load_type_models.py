@@ -6,9 +6,10 @@ from typing import Any
 from app.data.database_app import database_app
 from app.data.commands.type_command import get_all
 from app.data.models.cost_type_model import CostTypeModel
+from app.data.models.event_type_model import EventTypeModel
 from app.data.models.frequency_type_model import FrequencyTypeModel
-from app.data.models.invoice_status_type_model import InvoiceStatusTypeModel
 from app.data.models.rental_status_type_model import RentalStatusTypeModel
+from app.data.models.invoice_status_type_model import InvoiceStatusTypeModel
 from app.data.models.asset_category_type_model import AssetCategoryTypeModel
 from app.data.models.asset_manufacturer_type_model import AssetManufacturerTypeModel
 
@@ -95,6 +96,30 @@ class TestLoadTypeModels(unittest.TestCase):
         self.assertEqual(self.select_model_by_code(model_list=models, code="lamborghini").code, "lamborghini")
         self.assertEqual(self.select_model_by_code(model_list=models, code="telsa").code, "telsa")
         self.assertEqual(self.select_model_by_code(model_list=models, code="mercedes").code, "mercedes")
+
+    def test_load_event_type_model(self):
+        models = get_all(db=self.session, model=EventTypeModel)
+        self.assertEqual(len(models), 18)
+        self.assertEqual(self.select_model_by_code(model_list=models, code="power_on").code, "power_on")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="power_off").code, "power_off")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="over_heating").code, "over_heating")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="tire_pressure").code, "tire_pressure")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="check_engine").code, "check_engine")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="airbags_deployed").code, "airbags_deployed")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="maintenance").code, "maintenance")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="speed").code, "speed")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="sudden_stop").code, "sudden_stop")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="rollover").code, "rollover")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="process_error").code, "process_error")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="send_email").code, "send_email")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="send_text").code, "send_text")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="send_chat").code, "send_chat")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="asset_pickup").code, "asset_pickup")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="asset_returned").code, "asset_returned")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="delivery_charge").code, "delivery_charge")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="pickup_charge").code, "pickup_charge")
+
+
 
 
 if __name__ == '__main__':

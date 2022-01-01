@@ -6,7 +6,7 @@ from typing import Sequence, Optional
 
 
 class EventBase(BaseModel):
-    event_type: str
+    event_type_id: int
     geo_lat: Optional[float] = 0
     geo_long: Optional[float] = 0
     event_data: Optional[str] = ""
