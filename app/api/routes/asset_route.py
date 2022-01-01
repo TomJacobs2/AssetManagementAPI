@@ -1,8 +1,8 @@
 #  Copyright (c) Thomas Jacobs. All Rights Reserved.
 
-from typing import Any
 from fastapi import APIRouter
 
+from app.schema.asset_schema import AssetRequest
 from app.business.logic.asset_logic import AssetLogic
 logic = AssetLogic()
 
@@ -22,15 +22,15 @@ async def get_action(asset_id: int):
 
 
 @router.post("/", tags=["assets"])
-async def post_action(request: Any):
+async def post_action(request: AssetRequest):
     return logic.process_post(request=request)
 
 
 @router.put("/", tags=["assets"])
-async def put_action(request: Any):
+async def put_action(request: AssetRequest):
     return logic.process_post(request=request)
 
 
 @router.delete("/", tags=["assets"])
 async def delete_action(asset_id: int):
-    return {"msg": f"Delete asset {asset_id}"}
+    return logic.process_delete(asset_id=asset_id)

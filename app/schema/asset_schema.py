@@ -40,3 +40,14 @@ class Asset(AssetInDBBase):
 
 class AssetSearchResults(BaseModel):
     results: Sequence[Asset]
+
+
+class AssetRequest(BaseModel):
+    asset_tag: str
+    description: str
+    model_year: str
+    mileage: Optional[int] = 0
+    hours_ran: Optional[int] = 0
+    color: Optional[str] = None
+    asset_category_code: str
+    asset_manufacturer_code: str

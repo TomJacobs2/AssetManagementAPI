@@ -24,7 +24,15 @@ data_layer_test_files = data_layer_loader.discover(data_layer_test_dir)
 data_layer_runner = unittest.TextTestRunner()
 data_layer_runner.run(data_layer_test_files)
 
+
+#run the business layer unit tests
+
+
 from app.api.fast_api_app import fast_api_app
 api_app = fast_api_app.get_app()
+
+
+#run the api layer unit tests
+
 
 uvicorn.run(api_app, host="127.0.0.1", port=5001)

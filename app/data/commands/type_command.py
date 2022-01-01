@@ -51,8 +51,10 @@ def update(db: Session, model: ModelType, schema_in: Union[TypeUpdate, Dict[str,
 
 
 def retire_type_by_id(db: Session, model: ModelType, id: int):
-    db.excute(update(model).where(model.id == id).values(retired=False))
+    db.execute(f"UPDATE {model} SET retired = 1 WHERE id = {id}")
+    db.commit()
 
 
 def retire_type_by_code(db: Session, model: ModelType, code: str):
-    db.excute(update(model).where(model.code == code).values(retired=False))
+    db.execute(f"UPDATE {model} SET retired = 1 WHERE id = {id}")
+    db.commit()
