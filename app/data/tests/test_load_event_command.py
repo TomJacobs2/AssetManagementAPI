@@ -8,10 +8,14 @@ from app.data.commands.event_command import event_cmd
 from app.data.commands.asset_command import asset_cmd
 from app.data.commands.type_command import get_type_by_code
 
-asset_id = asset_cmd.get_asset_by_tag(db=database_app.get_session(), asset_tag="TEMSP2022002").id
+telsa_asset_id = asset_cmd.get_asset_by_tag(db=database_app.get_session(), asset_tag="TEMSP2022002").id
+ford_asset_id = asset_cmd.get_asset_by_tag(db=database_app.get_session(), asset_tag="FDF1502022002").id
 event_poweron_id = get_type_by_code(db=database_app.get_session(), model=EventTypeModel, code="power_on").id
+event_poweroff_id = get_type_by_code(db=database_app.get_session(), model=EventTypeModel, code="power_off").id
+event_speed_id = get_type_by_code(db=database_app.get_session(), model=EventTypeModel, code="speed").id
 
-class TestLoadAssetCommand(unittest.TestCase):
+
+class TestLoadEventCommand(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -35,6 +39,17 @@ class TestLoadAssetCommand(unittest.TestCase):
         results = event_cmd.get_all(db=database_app.get_session())
         self.assertEqual(len(results), 5)
 
-    def test_get(self):
-        results = event_cmd.get_events_for_asset(db=database_app.get_session(), asset_id=asset_id)
+    def test_get_asset_events(self):
+        results = event_cmd.get_events_for_sub_type(db=database_app.get_session(), subtype_code="asset",
+                                                    fk_link_id=telsa_asset_id)
         self.assertEqual(len(results), 3)
+
+    def test_get_user_events(self):
+        results = event_cmd.get_events_for_sub_type(db=database_app.get_session(), subtype_code="user",
+                                                    fk_link_id=ford_asset_id)
+        self.assertEqual(len(results), 1)
+
+    def test_get_account_events(self):
+        results = event_cmd.get_events_for_sub_type(db=database_app.get_session(), subtype_code="account",
+                                                    fk_link_id=ford_asset_id)
+        self.assertEqual(len(results), 1)

@@ -39,4 +39,4 @@ api_app = fast_api_app.get_app()
 #run the api layer unit tests
 
 
-uvicorn.run(api_app, host="127.0.0.1", port=5001)
+#uvicorn.run(api_app, host="127.0.0.1", port=5001)

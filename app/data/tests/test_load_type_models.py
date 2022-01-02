@@ -7,6 +7,7 @@ from app.data.database_app import database_app
 from app.data.commands.type_command import get_all
 from app.data.models.cost_type_model import CostTypeModel
 from app.data.models.event_type_model import EventTypeModel
+from app.data.models.event_subtype_model import EventSubTypeModel
 from app.data.models.frequency_type_model import FrequencyTypeModel
 from app.data.models.rental_status_type_model import RentalStatusTypeModel
 from app.data.models.invoice_status_type_model import InvoiceStatusTypeModel
@@ -119,7 +120,12 @@ class TestLoadTypeModels(unittest.TestCase):
         self.assertEqual(self.select_model_by_code(model_list=models, code="delivery_charge").code, "delivery_charge")
         self.assertEqual(self.select_model_by_code(model_list=models, code="pickup_charge").code, "pickup_charge")
 
-
+    def test_load_event_sub_type_model(self):
+        models = get_all(db=self.session, model=EventSubTypeModel)
+        self.assertEqual(len(models), 3)
+        self.assertEqual(self.select_model_by_code(model_list=models, code="asset").code, "asset")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="user").code, "user")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="account").code, "account")
 
 
 if __name__ == '__main__':

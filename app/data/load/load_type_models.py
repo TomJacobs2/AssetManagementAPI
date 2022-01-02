@@ -87,3 +87,8 @@ create_type(model=EventTypeModel, code="asset_pickup", description="Customer Pic
 create_type(model=EventTypeModel, code="asset_returned", description="Customer Returned")
 create_type(model=EventTypeModel, code="delivery_charge", description="Delivery Charge")
 create_type(model=EventTypeModel, code="pickup_charge", description="Pickup Charge")
+
+from app.data.models.event_subtype_model import EventSubTypeModel
+create_type(model=EventSubTypeModel, code="asset", description="Asset")
+create_type(model=EventSubTypeModel, code="user", description="User")
+create_type(model=EventSubTypeModel, code="account", description="Account")

@@ -7,10 +7,11 @@ from typing import Sequence, Optional
 
 class EventBase(BaseModel):
     event_type_id: int
+    event_subtype_id: int
+    fk_subtype_link_id: int
     geo_lat: Optional[float] = 0
     geo_long: Optional[float] = 0
     event_data: Optional[str] = ""
-    asset_id: int
 
 
 class EventCreate(EventBase):
@@ -39,6 +40,7 @@ class EventSearchResults(BaseModel):
 
 class EventRequest(BaseModel):
     event_type_code: str
+    event_subtype_code: str
     asset_tag: str
     geo_lat: Optional[float] = 0
     geo_long: Optional[float] = 0

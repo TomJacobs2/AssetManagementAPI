@@ -5,13 +5,13 @@ from app.business.events.event_base import EventBase
 from app.business.events.process_error_event import ProcessErrorEvent
 
 class ErrorSubscriber(SubscriberBase):
-    subscribed_events = {"process_error"}
+    subscribed_events = {"send_chat", "send_email", "send_text"}
 
     def __init__(self):
         pass
 
     def process_event(self, event: EventBase):
-        print("Error Subscriber: " + event.asset_tag)
+        print("Send Message Subscriber: " + event.asset_tag)
         if isinstance(event, ProcessErrorEvent):
             print(event.event_data)
         print(type(event))
