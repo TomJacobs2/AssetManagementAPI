@@ -6,9 +6,8 @@ import unittest
 from app.data.database_config import database_config
 database_config.set_database_uri(db_uri="sqlite:///./asset_test.db")
 
-
-#if os.path.isfile("./asset_test.db"):
-#    os.remove("./asset_test.db")
+if os.path.isfile("./asset_test.db"):
+    os.remove("./asset_test.db")
 
 from app.data.database_app import database_app
 
@@ -26,6 +25,11 @@ data_layer_runner.run(data_layer_test_files)
 
 
 #run the business layer unit tests
+business_layer_loader = unittest.TestLoader()
+business_layer_test_dir = './app/business/tests'
+business_layer_test_files = business_layer_loader.discover(business_layer_test_dir)
+business_layer_runner = unittest.TextTestRunner()
+business_layer_runner.run(business_layer_test_files)
 
 
 from app.api.fast_api_app import fast_api_app

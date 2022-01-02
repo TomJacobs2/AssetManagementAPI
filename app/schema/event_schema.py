@@ -38,7 +38,7 @@ class EventSearchResults(BaseModel):
 
 
 class EventRequest(BaseModel):
-    event_type: str
+    event_type_code: str
     asset_tag: str
     geo_lat: Optional[float] = 0
     geo_long: Optional[float] = 0
