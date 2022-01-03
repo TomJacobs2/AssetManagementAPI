@@ -92,3 +92,10 @@ from app.data.models.event_subtype_model import EventSubTypeModel
 create_type(model=EventSubTypeModel, code="asset", description="Asset")
 create_type(model=EventSubTypeModel, code="user", description="User")
 create_type(model=EventSubTypeModel, code="account", description="Account")
+
+from app.data.models.attribute_type_model import AttributeTypeModel
+create_type(model=AttributeTypeModel, code="power", description="Power")
+create_type(model=AttributeTypeModel, code="speed", description="Speed")
+create_type(model=AttributeTypeModel, code="location", description="Location")
+create_type(model=AttributeTypeModel, code="geo_fencing", description="Geo Fencing")
+create_type(model=AttributeTypeModel, code="time_fencing", description="Time Fencing")

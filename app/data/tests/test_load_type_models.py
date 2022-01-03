@@ -9,6 +9,7 @@ from app.data.models.cost_type_model import CostTypeModel
 from app.data.models.event_type_model import EventTypeModel
 from app.data.models.event_subtype_model import EventSubTypeModel
 from app.data.models.frequency_type_model import FrequencyTypeModel
+from app.data.models.attribute_type_model import AttributeTypeModel
 from app.data.models.rental_status_type_model import RentalStatusTypeModel
 from app.data.models.invoice_status_type_model import InvoiceStatusTypeModel
 from app.data.models.asset_category_type_model import AssetCategoryTypeModel
@@ -126,6 +127,15 @@ class TestLoadTypeModels(unittest.TestCase):
         self.assertEqual(self.select_model_by_code(model_list=models, code="asset").code, "asset")
         self.assertEqual(self.select_model_by_code(model_list=models, code="user").code, "user")
         self.assertEqual(self.select_model_by_code(model_list=models, code="account").code, "account")
+
+    def test_load_attribute_type_model(self):
+        models = get_all(db=self.session, model=AttributeTypeModel)
+        self.assertEqual(len(models), 5)
+        self.assertEqual(self.select_model_by_code(model_list=models, code="power").code, "power")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="speed").code, "speed")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="location").code, "location")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="geo_fencing").code, "geo_fencing")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="time_fencing").code, "time_fencing")
 
 
 if __name__ == '__main__':

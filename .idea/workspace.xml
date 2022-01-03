@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="446fd8fb-a802-439b-a34f-49c158161fd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/business/pubsub/subscribers/send_message_subscriber.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/models/event_subtype_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/models/asset_attribute_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/data/models/attribute_type_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schema/asset_attribute_schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/business/logic/event_logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/logic/event_logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/business/pubsub/subscribers/error_subscriber.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/pubsub/subscribers/error_subscriber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/commands/event_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/commands/event_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/load/load_event_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/load/load_event_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/business/tests/test_event_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/tests/test_event_factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/data/load/load_type_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/load/load_type_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/data/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/models/event_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/models/event_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/tests/test_load_event_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/tests/test_load_event_command.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/data/tests/test_load_type_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/tests/test_load_type_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schema/event_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schema/event_schema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +55,7 @@
       <recent name="E:\repos\AssetManagementAPI\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_app">
+  <component name="RunManager" selected="Python.run_tests">
     <configuration name="event_command" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AssetManagementAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,8 +170,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_app" />
         <item itemvalue="Python.run_tests" />
+        <item itemvalue="Python.run_app" />
         <item itemvalue="Python.event_command" />
         <item itemvalue="Python tests.Python tests for test_event_factory.TestEventFactory" />
         <item itemvalue="Python tests.Python tests in test_event_factory.py" />

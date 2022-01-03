@@ -44,109 +44,109 @@ class TestEventFactory(unittest.TestCase):
         self.assertEqual(len(event_factory.event_types), 18)
 
     def test_factory_return_airbag_deployed(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "airbags_deployed"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "airbags_deployed", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, AirbagsDeployedEvent))
 
     def test_factory_return_asset_pickup(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "asset_pickup"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "asset_pickup", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, AssetPickupEvent))
 
     def test_factory_return_asset_retuned(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "asset_returned"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "asset_returned", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, AssetReturnedEvent))
 
     def test_factory_return_check_engine(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "check_engine"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "check_engine", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, CheckEngineEvent))
 
     def test_factory_return_delivery_charge(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "delivery_charge"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "delivery_charge", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, DeliveryChargeEvent))
 
     def test_factory_return_maintenance(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "maintenance"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "maintenance", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, MaintenanceEvent))
 
     def test_factory_return_over_heating(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "over_heating"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "over_heating", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, OverHeatingEvent))
 
     def test_factory_return_pickup_charge(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "pickup_charge"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "pickup_charge", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, PickupChargeEvent))
 
     def test_factory_return_power_off(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "power_off"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "power_off", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, PowerOffEvent))
 
     def test_factory_return_power_on(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "power_on"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "power_on", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, PowerOnEvent))
 
     def test_factory_return_process_error(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "process_error"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "process_error", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, ProcessErrorEvent))
 
     def test_factory_return_rollover(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "rollover"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "rollover", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, RolloverEvent))
 
     def test_factory_return_send_chat(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "send_chat"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "send_chat", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, SendChatEvent))
 
     def test_factory_return_send_email(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "send_email"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "send_email", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, SendEmailEvent))
 
     def test_factory_return_send_text(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "send_text"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "send_text", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, SendTextEvent))
 
     def test_factory_return_speed(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "speed"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "speed", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, SpeedEvent))
 
     def test_factory_return_sudden_stop(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "sudden_stop"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "sudden_stop", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, SuddenStopEvent))
 
     def test_factory_return_tire_pressure(self):
-        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "tire_pressure"}
+        raw_data = {"asset_tag": "FE8122022001", "event_type_code": "tire_pressure", "event_subtype_code": "asset"}
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, TirePressureEvent))
