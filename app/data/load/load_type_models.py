@@ -87,6 +87,8 @@ create_type(model=EventTypeModel, code="asset_pickup", description="Customer Pic
 create_type(model=EventTypeModel, code="asset_returned", description="Customer Returned")
 create_type(model=EventTypeModel, code="delivery_charge", description="Delivery Charge")
 create_type(model=EventTypeModel, code="pickup_charge", description="Pickup Charge")
+create_type(model=EventTypeModel, code="location", description="Location")
+create_type(model=EventTypeModel, code="battery_disconnected", description="Battery Disconnected")
 
 from app.data.models.event_subtype_model import EventSubTypeModel
 create_type(model=EventSubTypeModel, code="asset", description="Asset")
@@ -97,5 +99,8 @@ from app.data.models.attribute_type_model import AttributeTypeModel
 create_type(model=AttributeTypeModel, code="power", description="Power")
 create_type(model=AttributeTypeModel, code="speed", description="Speed")
 create_type(model=AttributeTypeModel, code="location", description="Location")
-create_type(model=AttributeTypeModel, code="geo_fencing", description="Geo Fencing")
-create_type(model=AttributeTypeModel, code="time_fencing", description="Time Fencing")
+create_type(model=AttributeTypeModel, code="lights", description="Lights")
+create_type(model=AttributeTypeModel, code="doors", description="Doors")
+create_type(model=AttributeTypeModel, code="hood", description="Hood")
+create_type(model=AttributeTypeModel, code="trunk", description="Trunk")
+

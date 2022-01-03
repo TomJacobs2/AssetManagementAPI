@@ -101,7 +101,7 @@ class TestLoadTypeModels(unittest.TestCase):
 
     def test_load_event_type_model(self):
         models = get_all(db=self.session, model=EventTypeModel)
-        self.assertEqual(len(models), 18)
+        self.assertEqual(len(models), 20)
         self.assertEqual(self.select_model_by_code(model_list=models, code="power_on").code, "power_on")
         self.assertEqual(self.select_model_by_code(model_list=models, code="power_off").code, "power_off")
         self.assertEqual(self.select_model_by_code(model_list=models, code="over_heating").code, "over_heating")
@@ -120,6 +120,8 @@ class TestLoadTypeModels(unittest.TestCase):
         self.assertEqual(self.select_model_by_code(model_list=models, code="asset_returned").code, "asset_returned")
         self.assertEqual(self.select_model_by_code(model_list=models, code="delivery_charge").code, "delivery_charge")
         self.assertEqual(self.select_model_by_code(model_list=models, code="pickup_charge").code, "pickup_charge")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="location").code, "location")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="battery_disconnected").code, "battery_disconnected")
 
     def test_load_event_sub_type_model(self):
         models = get_all(db=self.session, model=EventSubTypeModel)
@@ -130,12 +132,14 @@ class TestLoadTypeModels(unittest.TestCase):
 
     def test_load_attribute_type_model(self):
         models = get_all(db=self.session, model=AttributeTypeModel)
-        self.assertEqual(len(models), 5)
+        self.assertEqual(len(models), 7)
         self.assertEqual(self.select_model_by_code(model_list=models, code="power").code, "power")
         self.assertEqual(self.select_model_by_code(model_list=models, code="speed").code, "speed")
         self.assertEqual(self.select_model_by_code(model_list=models, code="location").code, "location")
-        self.assertEqual(self.select_model_by_code(model_list=models, code="geo_fencing").code, "geo_fencing")
-        self.assertEqual(self.select_model_by_code(model_list=models, code="time_fencing").code, "time_fencing")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="lights").code, "lights")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="doors").code, "doors")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="hood").code, "hood")
+        self.assertEqual(self.select_model_by_code(model_list=models, code="trunk").code, "trunk")
 
 
 if __name__ == '__main__':

@@ -28,11 +28,11 @@ class TestEventFactory(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        print("Start Test Event Factory Command")
+        print("Start Test Event Factory Get Event Class")
 
     @classmethod
     def tearDownClass(cls):
-        print('Finished Test Event Factory Command')
+        print('Finished Test Event Factory Get Event Class')
 
     def setUp(self):
         pass
@@ -150,3 +150,7 @@ class TestEventFactory(unittest.TestCase):
         schema = EventRequest(**raw_data)
         type_result = event_factory.get_event_class(event_schema=schema)
         self.assertTrue(isinstance(type_result, TirePressureEvent))
+
+
+if __name__ == '__main__':
+    print("run tests from the run_tests file in the main directory")

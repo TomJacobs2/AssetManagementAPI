@@ -53,3 +53,7 @@ class TestLoadAccountCommand(unittest.TestCase):
         results = account_cmd.get_account_manager_accounts(db=database_app.get_session(),
                                                            account_manager_id=account_manager_id)
         self.assertEqual(len(results), 2)
+
+
+if __name__ == '__main__':
+    print("run tests from the run_tests file in the main directory")

@@ -53,3 +53,7 @@ class TestLoadEventCommand(unittest.TestCase):
         results = event_cmd.get_events_for_sub_type(db=database_app.get_session(), subtype_code="account",
                                                     fk_link_id=ford_asset_id)
         self.assertEqual(len(results), 1)
+
+
+if __name__ == '__main__':
+    print("run tests from the run_tests file in the main directory")
