@@ -2,6 +2,7 @@
 
 import datetime as _datetime
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Boolean
+from sqlalchemy.orm import relationship
 
 from app.data.database_app import Base
 from .user_model import UserModel
@@ -22,6 +23,9 @@ class AssetModel(Base):
     asset_category_id = Column(Integer, ForeignKey(AssetCategoryTypeModel.id))
     asset_manufacturer_id = Column(Integer, ForeignKey(AssetManufacturerTypeModel.id))
     retired = Column(Boolean, default=False)
+
+    geo_fencing = relationship("AssetGeoFencingModel")
+    time_fencing = relationship("AssetTimeFencingModel")
 
     create_date = Column(DateTime, default=_datetime.datetime.utcnow())
     update_date = Column(DateTime, default=_datetime.datetime.utcnow())

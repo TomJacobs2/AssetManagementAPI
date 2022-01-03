@@ -32,5 +32,5 @@ async def put_action(request: AssetRequest):
 
 
 @router.delete("/", tags=["assets"])
-async def delete_action(asset_id: int):
+async def delete_action(asset_id: str):
     return logic.process_delete(asset_id=asset_id)

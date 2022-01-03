@@ -19,7 +19,7 @@ class AssetGeoFencingModel(Base):
     upper_right_geo_long = Column(Float, nullable=False)
     geo_variance = Column(Float, nullable=False)
     max_failure_count = Column(Integer, nullable=False, default=5)
-    result_failure_count = Column(Integer, nullable=False, default=3)
+    reset_failure_count = Column(Integer, nullable=False, default=3)
     active = Column(Boolean, default=False)
 
     create_date = Column(DateTime, default=_datetime.datetime.utcnow())

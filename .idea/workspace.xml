@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="446fd8fb-a802-439b-a34f-49c158161fd3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/data/models/asset_geo_fencing_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data/models/asset_time_fencing_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/schema/asset_geo_fencing_schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/routes/asset_route.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/routes/asset_route.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/models/asset_geo_fencing_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/models/asset_geo_fencing_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/models/asset_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/models/asset_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,7 @@
       <recent name="E:\repos\AssetManagementAPI\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_tests">
+  <component name="RunManager" selected="Python.run_app">
     <configuration name="event_command" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AssetManagementAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -166,9 +167,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run_app" />
         <item itemvalue="Python.run_tests" />
         <item itemvalue="Python tests.Python tests for test_load_type_models.TestLoadTypeModels.test_load_asset_category_type_model" />
-        <item itemvalue="Python.run_app" />
         <item itemvalue="Python.event_command" />
         <item itemvalue="Python tests.Python tests for test_event_factory.TestEventFactory" />
       </list>
