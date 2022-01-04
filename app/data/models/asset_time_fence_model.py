@@ -1,15 +1,15 @@
 #  Copyright (c) Thomas Jacobs. All Rights Reserved.
 
 import datetime as _datetime
-from sqlalchemy import Column, Integer, Float, DateTime, ForeignKey, Boolean
+from sqlalchemy import Column, Integer, DateTime, ForeignKey, Boolean
 
 from app.data.database_app import Base
 from .user_model import UserModel
 from .asset_model import AssetModel
 
 
-class AssetTimeFencingModel(Base):
-    __tablename__ = "asset_time_fencing"
+class AssetTimeFenceModel(Base):
+    __tablename__ = "asset_time_fences"
 
     id = Column(Integer, primary_key=True, index=True)
     asset_id = Column(Integer, ForeignKey(AssetModel.id))

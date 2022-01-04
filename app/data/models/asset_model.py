@@ -24,10 +24,10 @@ class AssetModel(Base):
     asset_manufacturer_id = Column(Integer, ForeignKey(AssetManufacturerTypeModel.id))
     retired = Column(Boolean, default=False)
 
-    geo_fencing = relationship("AssetGeoFencingModel")
-    time_fencing = relationship("AssetTimeFencingModel")
-
     create_date = Column(DateTime, default=_datetime.datetime.utcnow())
     update_date = Column(DateTime, default=_datetime.datetime.utcnow())
     created_by = Column(Integer, ForeignKey(UserModel.id))
     updated_by = Column(Integer, ForeignKey(UserModel.id))
+
+    geo_fence = relationship("AssetGeoFenceModel", back_populates="geo_fence_owner")
+    time_fence = relationship("AssetTimeFenceModel")

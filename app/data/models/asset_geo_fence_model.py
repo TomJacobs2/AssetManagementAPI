@@ -1,6 +1,7 @@
 #  Copyright (c) Thomas Jacobs. All Rights Reserved.
 
 import datetime as _datetime
+from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Integer, Float, DateTime, ForeignKey, Boolean
 
 from app.data.database_app import Base
@@ -8,8 +9,8 @@ from .user_model import UserModel
 from .asset_model import AssetModel
 
 
-class AssetGeoFencingModel(Base):
-    __tablename__ = "asset_geo_fencing"
+class AssetGeoFenceModel(Base):
+    __tablename__ = "asset_geo_fences"
 
     id = Column(Integer, primary_key=True, index=True)
     asset_id = Column(Integer, ForeignKey(AssetModel.id))
@@ -26,3 +27,5 @@ class AssetGeoFencingModel(Base):
     update_date = Column(DateTime, default=_datetime.datetime.utcnow())
     created_by = Column(Integer, ForeignKey(UserModel.id))
     updated_by = Column(Integer, ForeignKey(UserModel.id))
+
+    geo_fence_owner = relationship("AssetModel", back_populates="geo_fence")

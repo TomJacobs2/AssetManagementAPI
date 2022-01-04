@@ -6,3 +6,4 @@ import app.data.load.load_type_models
 import app.data.load.load_asset_model
 import app.data.load.load_account_model
 import app.data.load.load_event_model
+import app.data.load.load_asset_geo_fence__model
